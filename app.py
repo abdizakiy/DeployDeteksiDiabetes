@@ -14,11 +14,11 @@ feature_dir = './static/feature'
 model_dir = './static/model'
 
 # Read image features
-fe = FeatureExtractor(load_model(model_dir + '/skinle_model.h5', compile=False))
+fe = FeatureExtractor(load_model(model_dir + '/model_retrieavl (1).h5', compile=False))
 
 img_paths = list()
 
-for img_path in sorted(Path(base_dir).glob("*.jpg")):
+for img_path in sorted(Path(base_dir).glob("*.png")):
     img_paths.append(img_path)
 
 features = np.load(feature_dir + '/extracted_feature.npy')
